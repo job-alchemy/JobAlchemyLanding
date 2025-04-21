@@ -7,7 +7,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section id="navbar" className="fixed w-full max-w-7xl top-3 z-50 backdrop-blur-md sm:-translate-x-8">
+    <section id="navbar" className="fixed max-w-7xl w-full left-1/2 -translate-x-1/2 top-3 z-50 backdrop-blur-md ">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-[#9addd4]/30">
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center">

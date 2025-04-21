@@ -21,7 +21,7 @@ const HeroSection = () => {
             </div>
             <h1 className="mt-8 text-[#4a4a4a] text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
               Automate Your Job Search
-              <span className="block">Land More Interviews</span>
+              
             </h1>
             <p className="max-w-2xl mx-auto mt-4 lg:text-lg text-[#4a4a4a]">
               JobAlchemy creates tailored resumes for each position and automatically applies to jobs matching your profile across multiple platforms. Save hours of tedious work while maximizing your success rate.
