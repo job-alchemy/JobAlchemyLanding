@@ -1,5 +1,5 @@
 import type React from "react"
-import { Mic, Search, Chrome, FileText, Network, Settings, Bot, BarChart } from "lucide-react"
+import { Search, Chrome, FileText, Network,  Bot, BarChart } from "lucide-react"
 
 interface FeatureCardProps {
   title: string
