@@ -72,8 +72,8 @@ type BeamOptions = {
 };
 
 type CollisionMechanismProps = {
-  containerRef: React.RefObject<HTMLDivElement>;
-  parentRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
+  parentRef: React.RefObject<HTMLDivElement | null>;
   beamOptions?: BeamOptions;
 };
 
