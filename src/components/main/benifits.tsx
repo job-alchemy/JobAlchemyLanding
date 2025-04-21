@@ -39,8 +39,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "AI-Powered Automation",
-      description: "Save time and increase your efficiency by automating your routine business processes.",
+      title: "AI-Powered Applications",
+      description: "Save time and increase your job search efficiency by automating applications to hundreds of positions with our AI-driven system.",
       stickyPosition: "22rem",
     },
     {
@@ -51,8 +51,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Real Time Data Analytics",
-      description: "We help you make more informed and strategic decisions by instantly analyzing your data.",
+      title: "Application Analytics",
+      description: "Track your application success rates and interview invitations with our real-time analytics dashboard.",
       stickyPosition: "23rem",
     },
     {
@@ -63,9 +63,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Personalized Experience",
-      description:
-        "It offers flexible solutions with its adaptable structure according to the specific needs of your business.",
+      title: "Personalized Applications",
+      description: "Our system creates tailored cover letters and adjusts your resume for each job to maximize your chances of getting noticed.",
       stickyPosition: "24rem",
     },
     {
@@ -76,9 +75,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Scalable Structure",
-      description:
-        "Move forward into the future with confidence, with an infrastructure that can expand as your business grows.",
+      title: "Job Search Automation",
+      description: "Set your preferences once, and let JobAlchemy continuously search and apply to new positions that match your skills and career goals.",
       stickyPosition: "25rem",
     },
   ]
@@ -90,10 +88,9 @@ export default function BenefitsSection() {
           <div>
             <header className="mb-6 lg:mb-12 mx-auto sticky lg:top-[22rem] text-center lg:text-start max-w-full">
               <div className="text-lg text-[#266968] mb-2 tracking-wider">Benefits</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f1f1f] dark:text-white">What Do We Bring to You?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f1f1f] dark:text-white">How JobAlchemy Transforms Your Job Hunt</h2>
               <p className="text-xl text-gray-800 dark:text-gray-300 mb-8">
-                All the innovative solutions you need to grow your business are here! We add value to your business with
-                our features that simplify your workflow, increase efficiency and strengthen your decisions.
+                Stop spending countless hours on job applications. JobAlchemy automates the tedious parts of job hunting, allowing you to focus on preparing for interviews and networking while our system works tirelessly to secure your next opportunity.
               </p>
             </header>
           </div>

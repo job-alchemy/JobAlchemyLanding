@@ -12,16 +12,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
             <Link href="#" className="text-2xl font-bold text-[#4a4a4a]">
-              Yarooo
+              JobAlchemy
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <NavLink to="#features">Benefits</NavLink>
-            <NavLink to="#howItWorks">Features</NavLink>
-            <NavLink to="#pricing">Services</NavLink>
-            {/* <NavLink to="#contact">Contact</NavLink> */}
+            <NavLink to="#benefits">Benefits</NavLink>
+            <NavLink to="#features">Features</NavLink>
+            <NavLink to="#solutions">Services</NavLink>
+            <NavLink to="#pricing">Pricing</NavLink>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -71,10 +71,16 @@ export default function Navbar() {
                 Features
               </MobileNavLink>
               <MobileNavLink
-                to="#services"
+                to="#solutions"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
+              </MobileNavLink>
+              <MobileNavLink
+                to="#pricing"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
               </MobileNavLink>
               <div className="pt-4 space-y-2">
                 <Link href={"/auth/login"}>

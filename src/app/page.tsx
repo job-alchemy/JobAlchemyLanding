@@ -1,4 +1,4 @@
-import FeaturesSection from "@/components/main/Features";
+
 import HeroSection from "@/components/main/HeroSection";
 import Navbar from "@/components/main/Navbar";
 import BenefitsSection from "@/components/main/benifits";
@@ -7,6 +7,7 @@ import PricingSection from "@/components/main/Pricing";
 import ContactSection from "@/components/main/Contact";
 import FAQPage from "@/components/main/Faq";
 import Footer from "@/components/main/Footer";
+import FeaturesSection from "@/components/main/FeaturesSection";
 
 
 export default function Home() {

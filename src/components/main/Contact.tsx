@@ -16,7 +16,7 @@ export default function ContactSection() {
     firstName: "",
     lastName: "",
     email: "",
-    subject: "Web Development",
+    subject: "Job Application Support",
     message: "",
   })
 
@@ -38,7 +38,7 @@ export default function ContactSection() {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "Web Development",
+      subject: "Job Application Support",
       message: "",
     })
   }
@@ -48,10 +48,9 @@ export default function ContactSection() {
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">Contact</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Connect With Us access</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch with JobAlchemy</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Stay in touch with us for updates, support, and valuable insights. We&apos;re here to help you every step of the
-            way!
+            Have questions about how JobAlchemy can transform your job search? Our team is ready to help you automate your way to career success!
           </p>
         </header>
 
@@ -64,7 +63,7 @@ export default function ContactSection() {
                   <Building2 className="size-5" />
                   <div className="font-bold">Location:</div>
                 </div>
-                <div className="text-muted-foreground">123 Maple Lane, Springfield, IL 62704</div>
+                <div className="text-muted-foreground">1010 Career Avenue, San Francisco, CA 94105</div>
               </div>
 
               <div>
@@ -72,7 +71,7 @@ export default function ContactSection() {
                   <Phone className="size-5" />
                   <div className="font-bold">Call us:</div>
                 </div>
-                <div className="text-muted-foreground">+1 (555) 987-6543</div>
+                <div className="text-muted-foreground">+1 (888) JOB-ALCH</div>
               </div>
 
               <div>
@@ -80,15 +79,15 @@ export default function ContactSection() {
                   <Mail className="size-5" />
                   <div className="font-bold">Email us:</div>
                 </div>
-                <div className="text-muted-foreground">contact@ourcompany.com</div>
+                <div className="text-muted-foreground">support@jobalchemy.com</div>
               </div>
 
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <Clock className="size-5" />
-                  <div className="font-bold">Business Hours:</div>
+                  <div className="font-bold">Support Hours:</div>
                 </div>
-                <div className="text-muted-foreground">Tuesday to Saturday, 9 AM - 5 PM</div>
+                <div className="text-muted-foreground">Monday to Friday, 9 AM - 6 PM ET</div>
               </div>
             </div>
           </div>
@@ -103,7 +102,7 @@ export default function ContactSection() {
                     <Input
                       id="firstName"
                       name="firstName"
-                      placeholder="Leopoldo"
+                      placeholder="John"
                       value={formData.firstName}
                       onChange={handleChange}
                     />
@@ -113,7 +112,7 @@ export default function ContactSection() {
                     <Input
                       id="lastName"
                       name="lastName"
-                      placeholder="Miranda"
+                      placeholder="Smith"
                       value={formData.lastName}
                       onChange={handleChange}
                     />
@@ -127,7 +126,7 @@ export default function ContactSection() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="contact@bundui.com"
+                      placeholder="you@example.com"
                       value={formData.email}
                       onChange={handleChange}
                     />
@@ -142,11 +141,11 @@ export default function ContactSection() {
                         <SelectValue placeholder="Select subject" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Web Development">Web Development</SelectItem>
-                        <SelectItem value="Mobile Development">Mobile Development</SelectItem>
-                        <SelectItem value="Figma Design">Figma Design</SelectItem>
-                        <SelectItem value="REST API">REST API</SelectItem>
-                        <SelectItem value="FullStack Project">FullStack Project</SelectItem>
+                        <SelectItem value="Job Application Support">Job Application Support</SelectItem>
+                        <SelectItem value="Resume Builder Help">Resume Builder Help</SelectItem>
+                        <SelectItem value="Cover Letter Assistance">Cover Letter Assistance</SelectItem>
+                        <SelectItem value="Account Issues">Account Issues</SelectItem>
+                        <SelectItem value="Pricing & Billing">Pricing & Billing</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

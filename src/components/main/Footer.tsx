@@ -13,56 +13,56 @@ export default function Footer() {
               <span className="flex items-center justify-center size-7 lg:size-8 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary">
                 <SunDim className="size-5 lg:size-6 text-white" />
               </span>
-              <h5 className="text-lg lg:text-xl">Yarooo</h5>
+              <h5 className="text-lg lg:text-xl">JobAlchemy</h5>
             </Link>
           </div>
 
-          {/* Contact Links */}
+          {/* Company Links */}
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Contact</h3>
+            <h3 className="font-bold text-lg mb-2">Company</h3>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Github
+                About Us
               </Link>
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Twitter
+                Careers
               </Link>
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Instagram
+                Blog
               </Link>
             </div>
           </div>
 
-          {/* Platforms Links */}
+          {/* Features Links */}
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Platforms</h3>
+            <h3 className="font-bold text-lg mb-2">Features</h3>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                iOS
+                Resume Builder
               </Link>
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Android
+                Cover Letter AI
               </Link>
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Web
+                Job Tracking
               </Link>
             </div>
           </div>
 
-          {/* Help Links */}
+          {/* Resources Links */}
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Help</h3>
+            <h3 className="font-bold text-lg mb-2">Resources</h3>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Contact Us
+                Help Center
               </Link>
             </div>
             <div>
@@ -72,27 +72,27 @@ export default function Footer() {
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Feedback
+                Support
               </Link>
             </div>
           </div>
 
-          {/* Socials Links */}
+          {/* Connect Links */}
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Socials</h3>
+            <h3 className="font-bold text-lg mb-2">Connect</h3>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
-                Twitch
+                LinkedIn
+              </Link>
+            </div>
+            <div>
+              <Link className="opacity-60 hover:opacity-100" href="#">
+                Twitter
               </Link>
             </div>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
                 Discord
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Dribbble
               </Link>
             </div>
           </div>
@@ -101,15 +101,7 @@ export default function Footer() {
         <Separator className="my-6" />
 
         <div className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} | It is under the roof of{" "}
-          <Link
-            target="_blank"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary underline-offset-4 hover:underline p-0 h-auto"
-            href="https://bundui.io/"
-          >
-            Bundui
-          </Link>
-          .
+          © {new Date().getFullYear()} JobAlchemy | All rights reserved. Transforming job applications with automation.
         </div>
       </div>
     </footer>

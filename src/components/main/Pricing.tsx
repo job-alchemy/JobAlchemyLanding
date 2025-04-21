@@ -18,43 +18,43 @@ export default function PricingSection() {
   const pricingTiers: PricingTier[] = [
     {
       name: "Free",
-      description: "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      description: "Perfect for exploring JobAlchemy's basic capabilities",
       price: 0,
       features: [
-        { text: "1 team member" },
-        { text: "1 GB storage" },
-        { text: "Upto 2 pages" },
+        { text: "10 applications per month" },
+        { text: "Basic resume parsing" },
+        { text: "Simple job matching" },
+        { text: "Email notifications" },
         { text: "Community support" },
-        { text: "AI assistance" },
       ],
       buttonText: "Start Free Trial",
     },
     {
       name: "Premium",
-      description: "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-      price: 49,
+      description: "Ideal for active job seekers applying to multiple positions",
+      price: 29,
       features: [
-        { text: "4 team member" },
-        { text: "8 GB storage" },
-        { text: "Upto 6 pages" },
+        { text: "100 applications per month" },
+        { text: "AI resume optimization" },
+        { text: "Custom cover letter generation" },
+        { text: "Application tracking dashboard" },
         { text: "Priority support" },
-        { text: "AI assistance" },
       ],
-      buttonText: "Get starterd",
+      buttonText: "Get Started",
       isPremium: true,
     },
     {
-      name: "Enterprise",
-      description: "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-      price: 139,
+      name: "Professional",
+      description: "For career-focused individuals with high-volume applications",
+      price: 59,
       features: [
-        { text: "10 team member" },
-        { text: "20 GB storage" },
-        { text: "Upto 10 pages" },
+        { text: "Unlimited applications" },
+        { text: "Advanced keyword matching" },
+        { text: "Interview preparation AI" },
+        { text: "Career coaching session" },
         { text: "Phone & email support" },
-        { text: "AI assistance" },
       ],
-      buttonText: "Contact US",
+      buttonText: "Contact Us",
     },
   ]
 
@@ -63,9 +63,9 @@ export default function PricingSection() {
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">Pricing</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get unlimitted access</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Application Power</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Enjoy unlimited access to all features and resources, empowering your business to grow without limits.
+            Select a plan that fits your job search needs. Apply smarter, not harder with JobAlchemy&apos;s automated solutions.
           </p>
         </header>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
