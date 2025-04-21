@@ -1,5 +1,5 @@
 import type React from "react"
-import { Mic, Search, Chrome, FileText, Network, Settings } from "lucide-react"
+import { Mic, Search, Chrome, FileText, Network, Settings, Bot, BarChart } from "lucide-react"
 
 interface FeatureCardProps {
   title: string
@@ -22,39 +22,39 @@ const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
 export default function FeaturesSection() {
   const features: FeatureCardProps[] = [
     {
-      title: "Voice Interactive Onboarding",
+      title: "AI Resume Generator",
       description:
-        "Engage in a voice-guided session where you can articulate your work history and accomplishments in your own words, ensuring authentic capture of your professional achievements.",
-      icon: <Mic className="text-primary" />,
+        "Our AI analyzes job descriptions and automatically creates tailored resumes that highlight your most relevant skills and experiences for each specific position.",
+      icon: <Bot className="text-primary" />,
     },
     {
-      title: "Enhanced Role Recommendation",
+      title: "Smart Job Matching",
       description:
-        "Receive a curated list of roles that match your skills, experience, and career aspirations immediately after onboarding, showcasing opportunities available on platforms like LinkedIn.",
+        "JobAlchemy scans thousands of job listings across multiple platforms to find positions that best match your profile, preferences, and career goals.",
       icon: <Search className="text-primary" />,
     },
     {
-      title: "JobAlchemy Chrome Extension",
+      title: "One-Click Application",
       description:
-        "Apply to jobs at scale with our Chrome extension that streamlines the application process while maintaining personalization for each opportunity.",
+        "Apply to multiple jobs with a single click through our browser extension, which automatically fills out application forms and submits your tailored resume.",
       icon: <Chrome className="text-primary" />,
     },
     {
-      title: "Resume Optimization",
+      title: "ATS Optimization",
       description:
-        "Automatically generate ATS-friendly resumes tailored to specific job descriptions, enhancing your chances with contextually relevant content.",
+        "Every resume is optimized for Applicant Tracking Systems, incorporating relevant keywords and formatting to ensure your application passes automated filters.",
       icon: <FileText className="text-primary" />,
     },
     {
-      title: "Efficient Application Process",
+      title: "Application Dashboard",
       description:
-        "Save time and effort with auto-filling forms that streamline the application process, allowing you to apply to more positions with less manual work.",
-      icon: <Settings className="text-primary" />,
+        "Track all your job applications in one centralized dashboard with status updates, response tracking, and automatic follow-up scheduling.",
+      icon: <BarChart className="text-primary" />,
     },
     {
       title: "Strategic Networking",
       description:
-        "Connect with potential employers using our advanced algorithm that identifies and suggests contacts within companies posting relevant job openings.",
+        "Identify and connect with relevant professionals at target companies through our integrated networking suggestions to boost your application visibility.",
       icon: <Network className="text-primary" />,
     },
   ]
@@ -64,10 +64,11 @@ export default function FeaturesSection() {
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">Features</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Transform Your Job Search</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Automate Your Way To Employment</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Discover how JobAlchemy&apos;s innovative features can streamline your job application process, 
-            maximize your opportunities, and help you land your dream role faster than ever before.
+            JobAlchemy combines AI-powered resume creation with automated job applications 
+            so you can apply to hundreds of perfectly-matched positions while you focus on 
+            preparing for interviews.
           </p>
         </header>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

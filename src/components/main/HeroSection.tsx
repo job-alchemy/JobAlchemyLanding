@@ -16,19 +16,19 @@ const HeroSection = () => {
                 as="button"
                 className="bg-[#faf9f5] text-[#4a4a4a] flex items-center space-x-2"
               >
-                <span>Transforming Job Applications</span>
+                <span>AI-Powered Job Applications</span>
               </HoverBorderGradient>
             </div>
             <h1 className="mt-8 text-[#4a4a4a] text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
-              Apply To Hundreds Of Jobs
-              <span className="block">With One Click</span>
+              Automate Your Job Search
+              <span className="block">Land More Interviews</span>
             </h1>
             <p className="max-w-2xl mx-auto mt-4 lg:text-lg text-[#4a4a4a]">
-              JobAlchemy automates your entire job search process. Create personalized applications at scale, track your progress, and land more interviews with our AI-powered platform.
+              JobAlchemy creates tailored resumes for each position and automatically applies to jobs matching your profile across multiple platforms. Save hours of tedious work while maximizing your success rate.
             </p>
             <div className="mt-6 mb-12 flex flex-col sm:flex-row items-center justify-center gap-10">
               <Button size="lg" className="rounded-md font-normal text-base px-8 bg-[#9addd4] hover:bg-[#9addd4]/80 text-[#4a4a4a]">
-                Get Started Free
+                Start Applying Now
               </Button>
               <Button size="lg" variant="outline" className="rounded-md font-normal text-base px-8 text-[#4a4a4a] border-[#e7b38c] hover:bg-[#e7b38c]/10">
                 See How It Works

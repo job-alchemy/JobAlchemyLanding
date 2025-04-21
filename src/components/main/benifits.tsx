@@ -39,8 +39,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "AI-Powered Applications",
-      description: "Save time and increase your job search efficiency by automating applications to hundreds of positions with our AI-driven system.",
+      title: "AI Resume Optimization",
+      description: "Our AI analyzes each job posting and automatically tailors your resume to highlight relevant skills and experience, increasing your match score with ATS systems.",
       stickyPosition: "22rem",
     },
     {
@@ -51,8 +51,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Application Analytics",
-      description: "Track your application success rates and interview invitations with our real-time analytics dashboard.",
+      title: "Bulk Application Automation",
+      description: "Apply to hundreds of matched positions across LinkedIn, Indeed, and other job boards with a single click, saving you 20+ hours per week of manual application work.",
       stickyPosition: "23rem",
     },
     {
@@ -63,8 +63,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Personalized Applications",
-      description: "Our system creates tailored cover letters and adjusts your resume for each job to maximize your chances of getting noticed.",
+      title: "Smart Application Tracking",
+      description: "Monitor all your applications in one dashboard with real-time status updates, response rates, and automatic follow-up scheduling to maximize interview opportunities.",
       stickyPosition: "24rem",
     },
     {
@@ -75,8 +75,8 @@ export default function BenefitsSection() {
           height={40}
         />
       ),
-      title: "Job Search Automation",
-      description: "Set your preferences once, and let JobAlchemy continuously search and apply to new positions that match your skills and career goals.",
+      title: "Browser Extension Integration",
+      description: "Our powerful extension works silently in the background to identify job opportunities as you browse and can instantly apply with your optimized profile with a single click.",
       stickyPosition: "25rem",
     },
   ]
@@ -88,9 +88,9 @@ export default function BenefitsSection() {
           <div>
             <header className="mb-6 lg:mb-12 mx-auto sticky lg:top-[22rem] text-center lg:text-start max-w-full">
               <div className="text-lg text-[#266968] mb-2 tracking-wider">Benefits</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f1f1f] dark:text-white">How JobAlchemy Transforms Your Job Hunt</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f1f1f] dark:text-white">Job Applications on Autopilot</h2>
               <p className="text-xl text-gray-800 dark:text-gray-300 mb-8">
-                Stop spending countless hours on job applications. JobAlchemy automates the tedious parts of job hunting, allowing you to focus on preparing for interviews and networking while our system works tirelessly to secure your next opportunity.
+                JobAlchemy revolutionizes your job search by automating resume customization and job applications across all major platforms. Our AI ensures each application is perfectly tailored while our extension applies to jobs with a single click.
               </p>
             </header>
           </div>

@@ -9,33 +9,33 @@ interface ServiceProps {
 
 const services: ServiceProps[] = [
   {
-    title: "Consultation Services",
-    description: "Expert guidance tailored to identify opportunities and strategize effectively.",
+    title: "Smart Resume Builder",
+    description: "AI-powered tool that tailors your resume for each job application to increase interview chances.",
     isPro: false,
   },
   {
-    title: "Custom Domain Integration",
-    description: "Seamless integration of your unique domain for a professional online presence.",
+    title: "Auto Job Application",
+    description: "Automated system that submits applications to matching positions across multiple job platforms.",
     isPro: false,
   },
   {
-    title: "Social Media Integrations",
-    description: "Connect with popular platforms to enhance your online engagement and reach.",
+    title: "Job Board Integrations",
+    description: "Connect with popular job sites like LinkedIn, Indeed, and ZipRecruiter to maximize your reach.",
     isPro: false,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Effortlessly connect email marketing tools to streamline your campaigns.",
+    title: "Interview Preparation",
+    description: "AI-driven interview coaching with industry-specific question preparation and feedback.",
     isPro: true,
   },
   {
-    title: "SEO Optimization",
-    description: "Improve your search engine visibility with tailored optimization strategies.",
+    title: "Application Analytics",
+    description: "Track application status, success rates, and optimization suggestions to improve outcomes.",
     isPro: true,
   },
   {
-    title: "Ongoing Support",
-    description: "24/7 customer support to ensure smooth operations and address any issues.",
+    title: "Premium Support",
+    description: "Priority customer support and personalized guidance from career experts for your job search.",
     isPro: true,
   },
 ]
@@ -63,10 +63,10 @@ export default function ServicesSection() {
     <section id="solutions" className="pb-20 sm:pb-32">
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
-          <div className="text-lg text-primary mb-2 tracking-wider">Services</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Grow Your Business</h2>
+          <div className="text-lg text-primary mb-2 tracking-wider">Features</div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Land Your Dream Job Faster</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            From marketing and sales to operations and strategy, we have the expertise to help you achieve your goals.
+            Let our automation handle the tedious application process while you focus on preparing for interviews.
           </p>
         </header>
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-screen-lg mx-auto">
