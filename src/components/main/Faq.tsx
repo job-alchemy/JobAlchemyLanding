@@ -3,39 +3,54 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FAQPage() {
   const faqItems = [
     {
-      question: "Is using an AI-copilot tool like JobAlchemy considered cheating when applying for jobs?",
+      question: "How does JobAlchemy personalize my job search?",
       answer:
-        "No, it's not cheating. JobAlchemy doesn't create content for you out of nowhere. It helps you organize and present the information you've already provided—whether it's your work experience, education, or projects. The platform saves you time by handling tasks like formatting your CV for ATS and optimizing it for job descriptions. We also show you relevant roles that match your skillset and goals, even ones you might not have thought of. Ultimately, we help you focus on what matters—getting your foot in the door for interviews, not making false promises about landing the job.",
+        "From voice-driven onboarding to intelligent matching, we use your unique profile—skills, experience, and preferences—to surface roles you'll truly love.",
     },
     {
-      question: "What if the platform detects bot-like activity when JobAlchemy applies on my behalf?",
+      question: "How does JobAlchemy make my applications stand out?",
       answer:
-        "When JobAlchemy applies for you, we make sure to mimic human behavior. That means taking pauses between answers, scrolling, and introducing a time lag to make the application look natural. We're automating tasks, not trying to fool anyone. The goal is to make the process as smooth and human-like as possible without raising any flags.",
+        "We transform your spoken stories into ATS-compliant CVs and craft tailored messages for each opportunity, so every application highlights your strengths and voice.",
     },
     {
-      question: "Can I update my profile or CV once I've started using JobAlchemy?",
+      question: "Which platforms can I apply through?",
       answer:
-        "Absolutely! You can update your profile anytime with new skills, experiences, or goals. We'll use this updated info to adjust your CV, show you new roles, and ensure everything stays current. The more accurate and up-to-date your profile is, the better your chances of landing the right roles.",
+        "Our Chrome extension auto-fills your profile info and JD-specific details on LinkedIn, Workday, and Greenhouse—and we're continuously adding more platforms.",
     },
     {
-      question: "How does the free trial work?",
+      question: "How do Smart Referrals work?",
       answer:
-        "Our free trial gives you full access to all features for 14 days with no credit card required. After the trial period ends, you can choose to subscribe to one of our plans or your account will automatically switch to the free tier with limited features.",
+        "While you browse, we pinpoint key contacts—management, HR, and peers—and auto-generate personalized outreach messages in your tone to boost networking.",
     },
     {
-      question: "Can I change my plan later?",
+      question: "What events will I see?",
       answer:
-        "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes to your subscription will take effect immediately, and we'll prorate any payments accordingly.",
+        "Get handpicked online and offline events—webinars, workshops, conferences—relevant to your field, helping you grow your network and skills.",
     },
     {
       question: "How secure is my data?",
       answer:
-        "We take data security very seriously. All data is encrypted both in transit and at rest. We use industry-standard security measures and regularly undergo security audits to ensure your data remains protected.",
+        "Your information is encrypted and stored securely. We never share your data without permission, and you control what stays private.",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "How can I track my applications?",
       answer:
-        "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers for annual plans. For enterprise customers, we also offer invoicing options.",
+        "Your dashboard logs every job you applied to and shows which CV version was used—so you always know what's been sent and with which profile.",
+    },
+    {
+      question: "Are there any limits during the beta?",
+      answer:
+        "Nope. Enjoy unlimited applications, referrals, and event recommendations, while you help us refine JobAlchemy for all users.",
+    },
+    {
+      question: "How can I share feedback or report issues?",
+      answer:
+        "You're at the heart of our beta—submit feedback directly in the app or email feedback@jobalchemy.ai to tell us what's working and what needs improvement.",
+    },
+    {
+      question: "Can I export or download my CV?",
+      answer:
+        "Absolutely. Download your ATS‑ready CV as a PDF anytime to keep for your records or share it outside JobAlchemy.",
     },
   ]
 

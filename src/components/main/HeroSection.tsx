@@ -14,23 +14,23 @@ const HeroSection = () => {
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
-                className="bg-[#faf9f5] text-[#4a4a4a] flex items-center space-x-2"
+                className="bg-[#faf9f5] dark:bg-[#161618] text-[#4a4a4a] dark:text-white  flex items-center space-x-2"
               >
                 <span>AI-Powered Job Applications</span>
               </HoverBorderGradient>
             </div>
-            <h1 className="mt-8 text-[#4a4a4a] text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
+            <h1 className="mt-8 text-[#4a4a4a] dark:text-white text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
               Automate Your Job Search
               
             </h1>
-            <p className="max-w-2xl mx-auto mt-4 lg:text-lg text-[#4a4a4a]">
+            <p className="max-w-2xl mx-auto mt-4 lg:text-lg text-[#4a4a4a] dark:text-gray-300">
               JobAlchemy creates tailored resumes for each position and automatically applies to jobs matching your profile across multiple platforms. Save hours of tedious work while maximizing your success rate.
             </p>
             <div className="mt-6 mb-12 flex flex-col sm:flex-row items-center justify-center gap-10">
-              <Button size="lg" className="rounded-md font-normal text-base px-8 bg-[#9addd4] hover:bg-[#9addd4]/80 text-[#4a4a4a]">
+              <Button size="lg" className="rounded-md font-normal text-base px-8 bg-[#9addd4] hover:bg-[#9addd4]/80 text-white ">
                 Start Applying Now
               </Button>
-              <Button size="lg" variant="outline" className="rounded-md font-normal text-base px-8 text-[#4a4a4a] border-[#e7b38c] hover:bg-[#e7b38c]/10">
+              <Button size="lg" variant="outline" className="rounded-md font-normal text-base px-8 text-[#4a4a4a] dark:text-white border-[#e7b38c] hover:bg-[#e7b38c]/10">
                 See How It Works
               </Button>
             </div>
@@ -97,7 +97,16 @@ const HeroSection = () => {
             height={1080}
             priority
             quality={100}
-            className="relative z-20 object-cover w-full border rounded-lg shadow-2xl lg:rounded-2xl"
+            className="relative dark:hidden z-20 object-cover w-full border rounded-lg shadow-2xl lg:rounded-2xl"
+          />
+          <Image
+            src="/darkDash.png"
+            alt="JobAlchemy Dashboard"
+            width={1920}  
+            height={1080}
+            priority
+            quality={100}
+            className="relative hidden dark:block z-20 object-cover w-full border rounded-lg shadow-2xl lg:rounded-2xl"
           />
         </div>
       </div>

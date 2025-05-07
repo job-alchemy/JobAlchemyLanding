@@ -21,20 +21,20 @@ export default function PricingSection() {
       description: "Perfect for exploring JobAlchemy's basic capabilities",
       price: 0,
       features: [
-        { text: "10 applications per month" },
-        { text: "Basic resume parsing" },
-        { text: "Simple job matching" },
-        { text: "Email notifications" },
-        { text: "Community support" },
+        { text: "You are not supposed to see this" },
+        { text: "Just go back" },
+        { text: "Why are you still reading?" },
+        { text: "Seriously, look at Free" },
+        { text: "This plan is a joke" },
       ],
       buttonText: "Start Free Trial",
     },
     {
-      name: "Premium",
+      name: "Free",
       description: "Ideal for active job seekers applying to multiple positions",
-      price: 29,
+      price: 0,
       features: [
-        { text: "100 applications per month" },
+        { text: "Unlimited applications per month" },
         { text: "AI resume optimization" },
         { text: "Custom cover letter generation" },
         { text: "Application tracking dashboard" },
@@ -46,13 +46,13 @@ export default function PricingSection() {
     {
       name: "Professional",
       description: "For career-focused individuals with high-volume applications",
-      price: 59,
+      price: 0,
       features: [
-        { text: "Unlimited applications" },
-        { text: "Advanced keyword matching" },
-        { text: "Interview preparation AI" },
-        { text: "Career coaching session" },
-        { text: "Phone & email support" },
+        { text: "You are not supposed to see this" },
+        { text: "Just go back" },
+        { text: "This is getting ridiculous" },
+        { text: "Free is all you need" },
+        { text: "Fine, ignore our advice" },
       ],
       buttonText: "Contact Us",
     },
@@ -72,10 +72,10 @@ export default function PricingSection() {
           {pricingTiers.map((tier, index) => (
             <div
               key={index}
-              className={`rounded-lg ${
+              className={`rounded-lg transition-all duration-300 ${
                 tier.isPremium
-                  ? "bg-card text-card-foreground shadow-sm drop-shadow-xl shadow-black/10 dark:shadow-white/10 border border-primary lg:scale-[1.1]"
-                  : "border bg-card text-card-foreground shadow-sm"
+                  ? "bg-card text-card-foreground shadow-sm drop-shadow-xl shadow-black/10 dark:shadow-white/10 border border-primary lg:scale-[1.1] z-10"
+                  : "border bg-card text-card-foreground shadow-sm blur-[8px] "
               }`}
             >
               <div className="flex flex-col space-y-1.5 p-6">

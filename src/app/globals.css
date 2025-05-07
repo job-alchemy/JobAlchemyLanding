@@ -85,22 +85,22 @@
 }
 
 .dark {
-  --background: #222222;
+  --background: #232630;  /* Updated per dashboard requirement */
   --foreground: var(--yarooo-off-white);
-  --card: #333333;
+  --card: #2c303a;  /* Slightly lighter than background */
   --card-foreground: var(--yarooo-off-white);
-  --popover: #333333;
+  --popover: #2c303a;
   --popover-foreground: var(--yarooo-off-white);
   --primary: var(--yarooo-light-teal);
-  --primary-foreground: var(--yarooo-dark-gray);
+  --primary-foreground: #232630;  /* Using dashboard color for contrast */
   --secondary: var(--yarooo-light-brown);
   --secondary-foreground: var(--yarooo-off-white);
-  --muted: #333333;
-  --muted-foreground: #b3b3b3;
+  --muted: #2f3340;
+  --muted-foreground: #b8b8b8;
   --accent: var(--yarooo-light-brown);
   --accent-foreground: var(--yarooo-off-white);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgba(250, 249, 245, 0.1);
+  --border: rgba(250, 249, 245, 0.15);  /* Increased opacity for better visibility */
   --input: rgba(250, 249, 245, 0.15);
   --ring: var(--yarooo-light-teal);
   --chart-1: var(--yarooo-light-teal);
@@ -108,13 +108,13 @@
   --chart-3: #9addd4;
   --chart-4: #e7b38c;
   --chart-5: #78c9c0;
-  --sidebar: #333333;
+  --sidebar: #232630;  /* Match dashboard background */
   --sidebar-foreground: var(--yarooo-off-white);
   --sidebar-primary: var(--yarooo-light-teal);
-  --sidebar-primary-foreground: var(--yarooo-off-white);
+  --sidebar-primary-foreground: #232630;
   --sidebar-accent: var(--yarooo-light-brown);
   --sidebar-accent-foreground: var(--yarooo-off-white);
-  --sidebar-border: rgba(250, 249, 245, 0.1);
+  --sidebar-border: rgba(250, 249, 245, 0.15);
   --sidebar-ring: var(--yarooo-light-teal);
 }
 

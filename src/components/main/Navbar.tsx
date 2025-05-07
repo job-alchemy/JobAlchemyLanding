@@ -2,16 +2,17 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { useState } from 'react';
+import { ThemeToggle } from '../theme/ThemeToggle';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section id="navbar" className="fixed max-w-7xl w-full left-1/2 -translate-x-1/2 top-3 z-50 backdrop-blur-md ">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-[#9addd4]/30">
+    <section id="navbar" className="fixed max-w-7xl w-full left-1/2 -translate-x-1/2 top-3 z-50 backdrop-blur-md">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-primary/30 dark:border-primary/10">
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
-            <Link href="#" className="text-2xl font-bold text-[#4a4a4a]">
+            <Link href="#" className="text-2xl font-bold text-foreground">
               JobAlchemy
             </Link>
           </div>
@@ -25,16 +26,18 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Link href={"/auth/login"}>
-              <Button className="bg-[#4a4a4a] hover:bg-[#4a4a4a]/90 text-[#faf9f5]">Login</Button>
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Login</Button>
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               id="mobile-menu-button"
-              className="text-[#4a4a4a] hover:text-black"
+              className="text-foreground hover:text-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg
@@ -84,7 +87,7 @@ export default function Navbar() {
               </MobileNavLink>
               <div className="pt-4 space-y-2">
                 <Link href={"/auth/login"}>
-                  <Button className="bg-[#4a4a4a] hover:bg-[#4a4a4a]/90 text-[#faf9f5] w-full">Login</Button>
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">Login</Button>
                 </Link>
               </div>
             </div>
@@ -99,7 +102,7 @@ function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
     <Link
     href={to}
-      className="text-[#4a4a4a] hover:text-[#e7b38c] duration-100 transition-colors"
+      className="text-foreground hover:text-secondary duration-100 transition-colors"
     >
       {children}
     </Link>
@@ -118,7 +121,7 @@ function MobileNavLink({
   return (
     <Link
     href={to}
-      className="block px-3 py-2 text-[#4a4a4a] hover:text-[#e7b38c] transition-colors"
+      className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
       onClick={onClick}
     >
       {children}

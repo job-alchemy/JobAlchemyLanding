@@ -12,7 +12,7 @@ interface BenefitCardProps {
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, number, title, description, stickyPosition }) => {
   return (
     <div
-      className="rounded-lg text-card-foreground group/number lg:sticky shadow-none border bg-white dark:bg-black"
+      className="rounded-lg text-card-foreground group/number lg:sticky shadow-none border bg-white dark:bg-card dark:border-border/20"
       style={{ top: stickyPosition }}
     >
       <div className="flex flex-col space-y-1.5 p-6">
@@ -22,9 +22,9 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ icon, number, title, descript
             {number < 10 ? `0${number}` : number}
           </span>
         </div>
-        <h3 className="text-2xl font-semibold leading-none tracking-tight text-[#1f1f1f] dark:text-white">{title}</h3>
+        <h3 className="text-2xl font-semibold leading-none tracking-tight text-foreground">{title}</h3>
       </div>
-      <div className="p-6 pt-0 text-gray-800 dark:text-gray-300">{description}</div>
+      <div className="p-6 pt-0 text-muted-foreground">{description}</div>
     </div>
   )
 }
@@ -34,7 +34,7 @@ export default function BenefitsSection() {
     {
       icon: (
         <Blocks
-          className="lucide lucide-blocks mb-6 text-[#266968] bg-[#9addd4]/20 p-2 rounded-full ring-8 ring-[#9addd4]/10"
+          className="lucide lucide-blocks mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
           width={40}
           height={40}
         />
@@ -46,7 +46,7 @@ export default function BenefitsSection() {
     {
       icon: (
         <ChartLine
-          className="lucide lucide-chart-line mb-6 text-[#266968] bg-[#9addd4]/20 p-2 rounded-full ring-8 ring-[#9addd4]/10"
+          className="lucide lucide-chart-line mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
           width={40}
           height={40}
         />
@@ -58,7 +58,7 @@ export default function BenefitsSection() {
     {
       icon: (
         <Wallet
-          className="lucide lucide-wallet mb-6 text-[#266968] bg-[#9addd4]/20 p-2 rounded-full ring-8 ring-[#9addd4]/10"
+          className="lucide lucide-wallet mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
           width={40}
           height={40}
         />
@@ -70,7 +70,7 @@ export default function BenefitsSection() {
     {
       icon: (
         <Sparkle
-          className="lucide lucide-sparkle mb-6 text-[#266968] bg-[#9addd4]/20 p-2 rounded-full ring-8 ring-[#9addd4]/10"
+          className="lucide lucide-sparkle mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
           width={40}
           height={40}
         />
@@ -87,9 +87,9 @@ export default function BenefitsSection() {
         <div className="grid lg:grid-cols-2 lg:gap-24">
           <div>
             <header className="mb-6 lg:mb-12 mx-auto sticky lg:top-[22rem] text-center lg:text-start max-w-full">
-              <div className="text-lg text-[#266968] mb-2 tracking-wider">Benefits</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f1f1f] dark:text-white">Job Applications on Autopilot</h2>
-              <p className="text-xl text-gray-800 dark:text-gray-300 mb-8">
+              <div className="text-lg text-primary mb-2 tracking-wider">Benefits</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Job Applications on Autopilot</h2>
+              <p className="text-xl text-muted-foreground mb-8">
                 JobAlchemy revolutionizes your job search by automating resume customization and job applications across all major platforms. Our AI ensures each application is perfectly tailored while our extension applies to jobs with a single click.
               </p>
             </header>

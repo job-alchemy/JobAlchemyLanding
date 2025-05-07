@@ -4,10 +4,9 @@ import Navbar from "@/components/main/Navbar";
 import BenefitsSection from "@/components/main/benifits";
 import ServicesSection from "@/components/main/Services";
 import PricingSection from "@/components/main/Pricing";
-import ContactSection from "@/components/main/Contact";
 import FAQPage from "@/components/main/Faq";
 import Footer from "@/components/main/Footer";
-import FeaturesSection from "@/components/main/FeaturesSection";
+
 
 
 export default function Home() {
@@ -16,10 +15,10 @@ export default function Home() {
       <Navbar/>
       <HeroSection/>
       <BenefitsSection/>
-      <FeaturesSection/>
+      {/* <FeaturesSection/> */}
       <ServicesSection/>
       <PricingSection/>
-      <ContactSection/>
+      {/* <ContactSection/> */}
       <FAQPage/>
       <Footer/>
     </div>

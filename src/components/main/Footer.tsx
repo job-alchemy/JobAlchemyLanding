@@ -17,68 +17,11 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Company Links */}
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Company</h3>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                About Us
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Careers
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Blog
-              </Link>
-            </div>
-          </div>
+          {/* Added empty space for better positioning */}
+          <div className="hidden xl:block xl:col-span-2"></div>
 
-          {/* Features Links */}
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Features</h3>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Resume Builder
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Cover Letter AI
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Job Tracking
-              </Link>
-            </div>
-          </div>
-
-          {/* Resources Links */}
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg mb-2">Resources</h3>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Help Center
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                FAQ
-              </Link>
-            </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="#">
-                Support
-              </Link>
-            </div>
-          </div>
-
-          {/* Connect Links */}
-          <div className="flex flex-col gap-2">
+          {/* Connect Links - Now aligned to the far right */}
+          <div className="flex flex-col gap-2 col-span-2 md:col-span-4 xl:col-span-2 xl:justify-self-end mr-10">
             <h3 className="font-bold text-lg mb-2">Connect</h3>
             <div>
               <Link className="opacity-60 hover:opacity-100" href="#">
