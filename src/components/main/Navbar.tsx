@@ -12,7 +12,7 @@ export default function Navbar() {
     const element = document.getElementById(sectionId);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 100, // Offset to account for the navbar height
+        top: element.offsetTop - 100, 
         behavior: 'smooth'
       });
     }

@@ -1,6 +1,7 @@
-import Link from "next/link"
-import { SunDim } from "lucide-react"
-import { Separator } from "@/components/ui/separator"
+import Link from "next/link";
+import { SunDim } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,11 +10,21 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           {/* Logo Section */}
           <div className="col-span-full xl:col-span-2">
-            <Link className="flex font-bold items-center" href="/">
-              <span className="flex items-center justify-center size-7 lg:size-8 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary">
-                <SunDim className="size-5 lg:size-6 text-white" />
-              </span>
-              <h5 className="text-lg lg:text-xl">JobAlchemy</h5>
+            <Link
+              className="flex font-bold items-center"
+              href="/"
+            >
+              <div className="flex items-center gap-2">
+                <Image
+                  className="rounded-sm" 
+                  src="/logo.png"
+                  alt="JobAlchemy Logo"
+                  width={28}
+                  height={28}
+                />
+
+                <h5 className="text-lg lg:text-xl">JobAlchemy</h5>
+              </div>
             </Link>
           </div>
 
@@ -44,9 +55,10 @@ export default function Footer() {
         <Separator className="my-6" />
 
         <div className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} JobAlchemy | All rights reserved. Transforming job applications with automation.
+          © {new Date().getFullYear()} JobAlchemy | All rights reserved.
+          Transforming job applications with automation.
         </div>
       </div>
     </footer>
-  )
+  );
 }
