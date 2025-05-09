@@ -55,7 +55,7 @@ export default function FAQPage() {
   ]
 
   return (
-    <section className="pb-20 sm:pb-32">
+    <section className="pb-20 sm:pb-32" id="faq" >
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">FAQS</div>

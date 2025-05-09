@@ -60,7 +60,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ title, description, isPro }) => {
 
 export default function ServicesSection() {
   return (
-    <section id="solutions" className="pb-20 sm:pb-32">
+    <section id="features" className="pb-20 sm:pb-32">
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">Features</div>

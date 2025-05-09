@@ -7,6 +7,17 @@ import { ThemeToggle } from '../theme/ThemeToggle';
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100, // Offset to account for the navbar height
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="navbar" className="fixed max-w-7xl w-full left-1/2 -translate-x-1/2 top-3 z-50 backdrop-blur-md">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-primary/30 dark:border-primary/10">
@@ -19,10 +30,10 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <NavLink to="#benefits">Benefits</NavLink>
-            <NavLink to="#features">Features</NavLink>
-            <NavLink to="#solutions">Services</NavLink>
-            <NavLink to="#pricing">Pricing</NavLink>
+            <NavLink to="#benefits" onClick={(e) => handleScrollToSection(e, "benefits")}>Benefits</NavLink>
+            <NavLink to="#features" onClick={(e) => handleScrollToSection(e, "features")}>Features</NavLink>
+            <NavLink to="#pricing" onClick={(e) => handleScrollToSection(e, "pricing")}>Pricing</NavLink>
+            <NavLink to="#faq" onClick={(e) => handleScrollToSection(e, "faq")}>FAQ</NavLink>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -63,25 +74,37 @@ export default function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <MobileNavLink
                 to="#benefits"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleScrollToSection(e, "benefits");
+                }}
               >
                 Benefits
               </MobileNavLink>
               <MobileNavLink
                 to="#features"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleScrollToSection(e, "features");
+                }}
               >
                 Features
               </MobileNavLink>
               <MobileNavLink
                 to="#solutions"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleScrollToSection(e, "solutions");
+                }}
               >
                 Services
               </MobileNavLink>
               <MobileNavLink
                 to="#pricing"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleScrollToSection(e, "pricing");
+                }}
               >
                 Pricing
               </MobileNavLink>
@@ -98,11 +121,12 @@ export default function Navbar() {
   );
 }
 
-function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
+function NavLink({ to, children, onClick }: { to: string; children: React.ReactNode; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
   return (
     <Link
-    href={to}
+      href={to}
       className="text-foreground hover:text-secondary duration-100 transition-colors"
+      onClick={onClick}
     >
       {children}
     </Link>
@@ -115,12 +139,12 @@ function MobileNavLink({
   children,
 }: {
   to: string;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   children: React.ReactNode;
 }) {
   return (
     <Link
-    href={to}
+      href={to}
       className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
       onClick={onClick}
     >
