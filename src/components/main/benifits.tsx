@@ -88,9 +88,9 @@ export default function BenefitsSection() {
           <div>
             <header className="mb-6 lg:mb-12 mx-auto sticky lg:top-[22rem] text-center lg:text-start max-w-full">
               <div className="text-lg text-primary mb-2 tracking-wider">Benefits</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Job Applications on Autopilot</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                JobAlchemy revolutionizes your job search by automating resume customization and job applications across all major platforms. Our AI ensures each application is perfectly tailored while our extension applies to jobs with a single click.
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">All-In-One Job Application Hub </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+              JobAlchemy is your ultimate one-stop platform for job discovery, application, and networking. From initially finding roles to creating perfectly optimized applications and reaching out to potential referrals, JobAlchemy manages the entire application lifecycle so you can focus solely on sharing your best self.
               </p>
             </header>
           </div>
