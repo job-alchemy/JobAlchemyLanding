@@ -9,33 +9,33 @@ interface ServiceProps {
 
 const services: ServiceProps[] = [
   {
-    title: "Smart Resume Builder",
-    description: "AI-powered tool that tailors your resume for each job application to increase interview chances.",
+    title: "Voice-Interactive Onboarding",
+    description: "Narrate your professional achievements naturally—JobAlchemy captures every detail authentically, crafting a comprehensive profile.",
     isPro: false,
   },
   {
-    title: "Auto Job Application",
-    description: "Automated system that submits applications to matching positions across multiple job platforms.",
+    title: "Enhanced Job Matching",
+    description: "Instant tailored recommendations that precisely align with your skills, experiences, and career aspirations.",
     isPro: false,
   },
   {
-    title: "Job Board Integrations",
-    description: "Connect with popular job sites like LinkedIn, Indeed, and ZipRecruiter to maximize your reach.",
+    title: "ATS-Compliant CVs",
+    description: "Professionally structured resumes with optimal keywords, formatting, and readability for higher success rates.",
     isPro: false,
   },
   {
-    title: "Interview Preparation",
-    description: "AI-driven interview coaching with industry-specific question preparation and feedback.",
+    title: "Automated Applications",
+    description: "Chrome extension that enables optimized applications directly through platforms like LinkedIn with just a few clicks.",
+    isPro: false,
+  },
+  {
+    title: "Smart Referrals",
+    description: "Identify key company contacts and craft personalized outreach messages in your own voice while browsing job posts.",
     isPro: true,
   },
   {
-    title: "Application Analytics",
-    description: "Track application status, success rates, and optimization suggestions to improve outcomes.",
-    isPro: true,
-  },
-  {
-    title: "Premium Support",
-    description: "Priority customer support and personalized guidance from career experts for your job search.",
+    title: "Event Recommendations",
+    description: "Stay ahead with personalized recommendations for industry events to expand your network and discover opportunities.",
     isPro: true,
   },
 ]
