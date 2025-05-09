@@ -41,13 +41,13 @@ const HeroSection = () => {
               </Button> */}
             </div>
             <p className="max-w-2xl mx-auto mt-4 lg:text-md text-[#4a4a4a] dark:text-gray-300">
-                <b>What's in a beta?</b>
+                <b>What&apos;s in a beta?</b>
                 <br />
                 <br />
                 <ul>
-                  <li>Free Access: You'll get full, unlimited access during the beta.</li>
+                  <li>Free Access: You&apos;ll get full, unlimited access during the beta.</li>
                   <li>Your Voice Matters: Your honest feedback will directly influence how JobAlchemy evolves.</li>
-                  <li>Limited Spots: We're inviting only 1,000 early users to help us fine-tune our platform—because quality feedback matters.</li>
+                  <li>Limited Spots: We&apos;re inviting only 1,000 early users to help us fine-tune our platform—because quality feedback matters.</li>
                 </ul>
             </p>
           </div>
