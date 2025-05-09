@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SunDim } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
