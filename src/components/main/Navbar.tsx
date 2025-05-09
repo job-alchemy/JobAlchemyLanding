@@ -38,9 +38,9 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Link href={"/auth/login"}>
+            {/* <Link href={"/auth/login"}>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Login</Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile menu button */}

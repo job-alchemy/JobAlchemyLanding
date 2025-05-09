@@ -31,12 +31,12 @@ const services: ServiceProps[] = [
   {
     title: "Smart Referrals",
     description: "Identify key company contacts and craft personalized outreach messages in your own voice while browsing job posts.",
-    isPro: true,
+    isPro: false,
   },
   {
     title: "Event Recommendations",
     description: "Stay ahead with personalized recommendations for industry events to expand your network and discover opportunities.",
-    isPro: true,
+    isPro: false,
   },
 ]
 

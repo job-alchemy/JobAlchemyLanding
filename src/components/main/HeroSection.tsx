@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HoverBorderGradient } from "@/components/ui/borderbeams";
 import { BackgroundBeamsWithCollision } from "@/components/ui/backgroundbeams";
 import { Button } from "@/components/ui/button";
@@ -22,16 +23,15 @@ const HeroSection = () => {
             <h1 className="mt-8 text-[#4a4a4a] dark:text-white text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
               Automate Your Job Search
             </h1>
-            <p className="max-w-2xl mx-auto mt-4 lg:text-lg text-[#4a4a4a] dark:text-gray-300">
-              Transform Your Job Search with AI Discover roles you’ll actually love. Craft personalized applications effortlessly. Apply smarter,faster, and get noticed
-            </p>
-            <div className="mt-6 mb-12 flex flex-col sm:flex-row items-center justify-center gap-10">
-              <Button
-                size="lg"
-                className="rounded-md font-normal text-base px-8 bg-[#9addd4] hover:bg-[#9addd4]/80 text-white "
-              >
-                Join The Beta
-              </Button>
+            <div className="mt-10 mb-8 flex flex-col sm:flex-row items-center justify-center gap-10">
+              <Link href="https://app.jobalchemy.ai">
+                <Button
+                  size="lg"
+                  className="rounded-md font-normal text-base px-8 bg-[#9addd4]/80 hover:bg-[#9addd4] hover:text-[#232630] text-white"
+                >
+                  <b>Join The Beta</b>
+                </Button>
+              </Link>
               {/* <Button
                 size="lg"
                 variant="outline"
@@ -40,6 +40,16 @@ const HeroSection = () => {
                 See How It Works
               </Button> */}
             </div>
+            <p className="max-w-2xl mx-auto mt-4 lg:text-md text-[#4a4a4a] dark:text-gray-300">
+                <b>What's in a beta?</b>
+                <br />
+                <br />
+                <ul>
+                  <li>Free Access: You'll get full, unlimited access during the beta.</li>
+                  <li>Your Voice Matters: Your honest feedback will directly influence how JobAlchemy evolves.</li>
+                  <li>Limited Spots: We're inviting only 1,000 early users to help us fine-tune our platform—because quality feedback matters.</li>
+                </ul>
+            </p>
           </div>
         </BackgroundBeamsWithCollision>
         <div className="relative w-full">

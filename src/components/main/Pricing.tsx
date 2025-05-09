@@ -65,7 +65,7 @@ export default function PricingSection() {
           <div className="text-lg text-primary mb-2 tracking-wider">Pricing</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Application Power</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Select a plan that fits your job search needs. Apply smarter, not harder with JobAlchemy&apos;s automated solutions.
+          Enjoy every JobAlchemy feature at no cost during our beta. All we ask in return is your honest feedback and to hop on a quick call now and then to let us know what’s working (and what isn’t).
           </p>
         </header>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -80,7 +80,7 @@ export default function PricingSection() {
             >
               <div className="flex flex-col space-y-1.5 p-6">
                 <h3 className="text-2xl font-semibold leading-none tracking-tight pb-2">{tier.name}</h3>
-                <p className="text-sm text-muted-foreground pb-4">{tier.description}</p>
+                {/* <p className="text-sm text-muted-foreground pb-4">{tier.description}</p> */}
                 <div>
                   <span className="text-3xl font-bold">${tier.price}</span>
                   <span className="text-muted-foreground"> /month</span>
