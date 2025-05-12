@@ -34,49 +34,73 @@ export default function BenefitsSection() {
     {
       icon: (
         <Blocks
-          className="lucide lucide-blocks mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
-          width={40}
-          height={40}
-        />
-      ),
-      title: "AI Resume Optimization",
-      description: "Our AI analyzes each job posting and automatically tailors your resume to highlight relevant skills and experience, increasing your match score with ATS systems.",
-      stickyPosition: "22rem",
-    },
-    {
-      icon: (
-        <ChartLine
-          className="lucide lucide-chart-line mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
-          width={40}
-          height={40}
-        />
-      ),
-      title: "Bulk Application Automation",
-      description: "Apply to hundreds of matched positions across LinkedIn, Indeed, and other job boards with a single click, saving you 20+ hours per week of manual application work.",
-      stickyPosition: "23rem",
-    },
-    {
-      icon: (
-        <Wallet
-          className="lucide lucide-wallet mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
-          width={40}
-          height={40}
-        />
-      ),
-      title: "Smart Application Tracking",
-      description: "Monitor all your applications in one dashboard with real-time status updates, response rates, and automatic follow-up scheduling to maximize interview opportunities.",
-      stickyPosition: "24rem",
-    },
-    {
-      icon: (
-        <Sparkle
           className="lucide lucide-sparkle mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
           width={40}
           height={40}
         />
       ),
-      title: "Browser Extension Integration",
-      description: "Our powerful extension works silently in the background to identify job opportunities as you browse and can instantly apply with your optimized profile with a single click.",
+      title: "AI Resume Optimization",
+      description: "Customize your resume with the right keywords and structure to ace every ATS scan.",
+      stickyPosition: "22rem",
+    },
+    {
+      icon: (
+        <ChartLine
+          className="lucide lucide-file-text mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
+          width={40}
+          height={40}
+        />
+      ),
+      title: "Job Description Driven CV Generation",
+      description: "Auto-generate a job-specific CV right in your browser as you browse openings.",
+      stickyPosition: "23rem",
+    },
+    {
+      icon: (
+        <Wallet
+          className="lucide lucide-users mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
+          width={40}
+          height={40}
+        />
+      ),
+      title: "Smart Referrals",
+      description: "Find management, HR, and peer contacts—and send outreach messages in your own voice.",
+      stickyPosition: "24rem",
+    },
+    {
+      icon: (
+        <Sparkle
+          className="lucide lucide-calendar-heart mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
+          width={40}
+          height={40}
+        />
+      ),
+      title: "Event Recommendations",
+      description: "Discover the best online and in-person career events to grow your network.",
+      stickyPosition: "25rem",
+    },
+    {
+      icon: (
+        <Sparkle
+          className="lucide lucide-folder-symlink  mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
+          width={40}
+          height={40}
+        />
+      ),
+      title: "Application Tracking",
+      description: "See every job you’ve sent and which CV version you used—updated in real time.",
+      stickyPosition: "25rem",
+    },
+    {
+      icon: (
+        <Sparkle
+          className="lucide lucide-blocks mb-6 text-primary bg-primary/10 p-2 rounded-full ring-8 ring-primary/5 dark:ring-primary/10"
+          width={40}
+          height={40}
+        />
+      ),
+      title: "All-in-One Hub",
+      description: "From discovery to application to follow-up, manage your entire job search in one place.",
       stickyPosition: "25rem",
     },
   ]
