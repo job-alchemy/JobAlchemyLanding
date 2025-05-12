@@ -36,9 +36,9 @@ export default function PricingSection() {
       features: [
         { text: "Unlimited applications per month" },
         { text: "AI resume optimization" },
-        { text: "Custom cover letter generation" },
+        { text: "Smart Referral" },
         { text: "Application tracking dashboard" },
-        { text: "Priority support" },
+        { text: "Event Reccomendations" },
       ],
       buttonText: "Get Started",
       isPremium: true,
