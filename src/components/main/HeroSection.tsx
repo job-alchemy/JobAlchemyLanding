@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { HoverBorderGradient } from "@/components/ui/borderbeams";
-import { BackgroundBeamsWithCollision } from "@/components/ui/backgroundbeams";
+// import { BackgroundBeamsWithCollision } from "@/components/ui/backgroundbeams";
 import { Button } from "@/components/ui/button";
 import { LottieAnimation } from "./LottieAnimation";
 
 const HeroSection = () => {
   return (
-    <>
+    // <BackgroundBeamsWithCollision>
       <section className="relative flex items-center justify-center mt-28">
         <div className="relative items-center flex flex-col justify-center w-full py-12 lg:py-20 ">
           {/* <BackgroundBeamsWithCollision> */}
@@ -48,7 +48,7 @@ const HeroSection = () => {
                   <p className="text-center">
                     <span className="block sm:inline">Free Access: You&apos;ll get full, unlimited access during the beta. </span>
                     <br></br><span className="block sm:inline">Your Voice Matters: Your honest feedback will directly influence how JobAlchemy evolves. </span>
-                    <br></br><span className="block sm:inline">Limited Spots: We&apos;re inviting only 1,000 early users to help us fine-tune our platform—because quality feedback matters.</span>
+                    <span className="block sm:inline">Limited Spots: We&apos;re inviting only 1,000 early users to help us fine-tune our platform—because quality feedback matters.</span>
                   </p>
               </div>
             </div>
@@ -113,7 +113,6 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
