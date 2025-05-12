@@ -38,7 +38,7 @@ export default function PricingSection() {
         { text: "AI resume optimization" },
         { text: "Smart Referral" },
         { text: "Application tracking dashboard" },
-        { text: "Event Reccomendations" },
+        { text: "Event Recommendations" },
       ],
       buttonText: "Get Started",
       isPremium: true,
