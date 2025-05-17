@@ -34,6 +34,11 @@ export default function Footer() {
           <div className="flex flex-col gap-2 col-span-2 md:col-span-4 xl:col-span-2 xl:justify-self-end mr-10">
             <h3 className="font-bold text-lg mb-2">Connect</h3>
             <div>
+              <Link className="opacity-60 hover:opacity-100" href="https://www.instagram.com/jobalchemy.ai?igsh=NngwZTd3ZnoxYms2&utm_source=qr">
+                Instagram
+              </Link>
+            </div>
+            <div>
               <Link className="opacity-60 hover:opacity-100" href="https://www.linkedin.com/company/jobalchemy-ai/">
                 LinkedIn
               </Link>
@@ -43,11 +48,7 @@ export default function Footer() {
                 X
               </Link>
             </div>
-            <div>
-              <Link className="opacity-60 hover:opacity-100" href="https://www.instagram.com/jobalchemy.ai?igsh=NngwZTd3ZnoxYms2&utm_source=qr">
-                Instagram
-              </Link>
-            </div>
+
           </div>
         </div>
 
