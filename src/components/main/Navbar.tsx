@@ -108,11 +108,11 @@ export default function Navbar() {
               >
                 Pricing
               </MobileNavLink>
-              <div className="pt-4 space-y-2">
+              {/* <div className="pt-4 space-y-2">
                 <Link href={"/auth/login"}>
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">Login</Button>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         )}
