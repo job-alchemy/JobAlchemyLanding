@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-primary/30 dark:border-primary/10">
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
-            <Link href="#" className="text-2xl font-bold text-foreground">
+            <Link href="#" onClick={(e) => handleScrollToSection(e, "home")} className="text-2xl font-bold text-foreground">
               JobAlchemy
             </Link>
           </div>
