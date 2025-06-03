@@ -50,13 +50,21 @@ export default function Footer() {
             </div>
 
           </div>
-        </div>
+        </div>        <Separator className="my-6" />
 
-        <Separator className="my-6" />
-
-        <div className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} JobAlchemy | All rights reserved.
-          Transforming job applications with automation.
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} JobAlchemy | All rights reserved.
+            Transforming job applications with automation.
+          </div>
+          <div className="text-sm">
+            <Link 
+              href="/privacy-policy" 
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
