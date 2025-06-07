@@ -26,14 +26,13 @@ export default function Navbar() {
             <Link href="#" onClick={(e) => handleScrollToSection(e, "home")} className="text-2xl font-bold text-foreground">
               JobAlchemy
             </Link>
-          </div>
-
-          {/* Desktop Navigation */}
+          </div>          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <NavLink to="#benefits" onClick={(e) => handleScrollToSection(e, "benefits")}>Benefits</NavLink>
             <NavLink to="#features" onClick={(e) => handleScrollToSection(e, "features")}>Features</NavLink>
             <NavLink to="#pricing" onClick={(e) => handleScrollToSection(e, "pricing")}>Pricing</NavLink>
             <NavLink to="#faq" onClick={(e) => handleScrollToSection(e, "faq")}>FAQ</NavLink>
+            <NavLink to="/blogs">Blog</NavLink>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -98,8 +97,7 @@ export default function Navbar() {
                 }}
               >
                 Services
-              </MobileNavLink>
-              <MobileNavLink
+              </MobileNavLink>              <MobileNavLink
                 to="#pricing"
                 onClick={(e) => {
                   setMobileMenuOpen(false);
@@ -107,6 +105,12 @@ export default function Navbar() {
                 }}
               >
                 Pricing
+              </MobileNavLink>
+              <MobileNavLink
+                to="/blogs"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </MobileNavLink>
               {/* <div className="pt-4 space-y-2">
                 <Link href={"/auth/login"}>
