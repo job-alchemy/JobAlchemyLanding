@@ -28,7 +28,7 @@ const HeroSection = () => {
                 <Link href="https://app.jobalchemy.ai">
                   <Button
                     size="lg"
-                    className="rounded-md font-normal text-base px-8 bg-[#9addd4]/80 hover:bg-[#9addd4] hover:text-[#232630] text-white"
+                    className="rounded-md font-normal text-base px-8 bg-[#9addd4]/80 hover:bg-[#9addd4] text-white cursor-pointer "
                   >
                     <b>Join The Beta</b>
                   </Button>

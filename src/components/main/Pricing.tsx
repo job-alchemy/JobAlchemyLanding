@@ -1,17 +1,18 @@
-import { Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PricingFeature {
-  text: string
+  text: string;
 }
 
 interface PricingTier {
-  name: string
-  description: string
-  price: number
-  features: PricingFeature[]
-  buttonText: string
-  isPremium?: boolean
+  name: string;
+  description: string;
+  price: number;
+  features: PricingFeature[];
+  buttonText: string;
+  isPremium?: boolean;
 }
 
 export default function PricingSection() {
@@ -31,7 +32,8 @@ export default function PricingSection() {
     },
     {
       name: "Free",
-      description: "Ideal for active job seekers applying to multiple positions",
+      description:
+        "Ideal for active job seekers applying to multiple positions",
       price: 0,
       features: [
         { text: "Unlimited applications per month" },
@@ -45,7 +47,8 @@ export default function PricingSection() {
     },
     {
       name: "Professional",
-      description: "For career-focused individuals with high-volume applications",
+      description:
+        "For career-focused individuals with high-volume applications",
       price: 0,
       features: [
         { text: "You are not supposed to see this" },
@@ -56,16 +59,22 @@ export default function PricingSection() {
       ],
       buttonText: "Contact Us",
     },
-  ]
+  ];
 
   return (
     <section id="pricing" className="pb-20 sm:pb-32">
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
-          <div className="text-lg text-primary mb-2 tracking-wider">Pricing</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Application Power</h2>
+          <div className="text-lg text-primary mb-2 tracking-wider">
+            Pricing
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Choose Your Application Power
+          </h2>
           <p className="text-xl text-muted-foreground mb-8">
-          Enjoy every JobAlchemy feature at no cost during our beta. All we ask in return is your honest feedback and to hop on a quick call now and then to let us know what’s working (and what isn’t).
+            Enjoy every JobAlchemy feature at no cost during our beta. All we
+            ask in return is your honest feedback and to hop on a quick call now
+            and then to let us know what’s working (and what isn’t).
           </p>
         </header>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -79,7 +88,9 @@ export default function PricingSection() {
               }`}
             >
               <div className="flex flex-col space-y-1.5 p-6">
-                <h3 className="text-2xl font-semibold leading-none tracking-tight pb-2">{tier.name}</h3>
+                <h3 className="text-2xl font-semibold leading-none tracking-tight pb-2">
+                  {tier.name}
+                </h3>
                 {/* <p className="text-sm text-muted-foreground pb-4">{tier.description}</p> */}
                 <div>
                   <span className="text-3xl font-bold">${tier.price}</span>
@@ -96,9 +107,13 @@ export default function PricingSection() {
                   ))}
                 </div>
               </div>
-              <div className="flex items-center p-6 pt-0">
+
+              <Link
+                className="flex items-center p-6 pt-0"
+                href={"https://app.jobalchemy.ai/signup"}
+              >
                 <Button
-                  className={`btn-bezel ${
+                  className={`btn-bezel cursor-pointer ${
                     tier.isPremium
                       ? "bg-primary text-primary-foreground hover:bg-primary/90"
                       : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
@@ -106,11 +121,11 @@ export default function PricingSection() {
                 >
                   {tier.buttonText}
                 </Button>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
