@@ -5,6 +5,7 @@ import BenefitsSection from "@/components/main/benifits";
 import ServicesSection from "@/components/main/Services";
 import PricingSection from "@/components/main/Pricing";
 import FAQPage from "@/components/main/Faq";
+import { CtaSection } from "@/components/main/Cta";
 import Footer from "@/components/main/Footer";
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <PricingSection/>
       {/* <ContactSection/> */}
       <FAQPage/>
+      <CtaSection/>
       <Footer/>
     </div>
   );

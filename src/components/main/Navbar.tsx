@@ -1,192 +1,301 @@
 "use client";
-import Link from "next/link";
-// import { Button } from '../ui/button'
-import { useState } from "react";
-import { ThemeToggle } from "../theme/ThemeToggle";
-import { Menu, X } from "lucide-react";
 
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
+import Link from "next/link";
+import { ThemeToggle } from "../theme/ThemeToggle";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleScrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100,
-        behavior: "smooth",
-      });
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    // Add throttling for smoother performance
+    let ticking = false;
+    const smoothScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", smoothScroll);
+    return () => window.removeEventListener("scroll", smoothScroll);
+  }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen && !(event.target as Element).closest('.mobile-menu-container')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
+  // Smooth scroll handler for hash links
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    if (hash.startsWith('#')) {
+      e.preventDefault();
+      // If we're not on the home page, navigate to home first
+      if (window.location.pathname !== '/') {
+        window.location.href = `/${hash}`;
+        return;
+      }
+      
+      const el = document.getElementById(hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
-  return (
-    <section
-      id="navbar"
-      className="fixed max-w-7xl w-full left-1/2 -translate-x-1/2 top-3 z-50 backdrop-blur-md"
+  const Logo = () => (
+    <Link
+      href="/"
+      className="font-normal flex space-x-2 items-center text-sm mr-4 text-foreground px-2 py-1 relative z-20 hover:text-primary transition-colors"
     >
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-4 bg-transparent mt-1 border-2 rounded-lg border-primary/30 dark:border-primary/10">
-        <div className="flex justify-between items-center py-2">
-          <div className="flex items-center">
-            <Link
-              href="#"
-              onClick={(e) => handleScrollToSection(e, "home")}
-              className="text-2xl font-bold text-foreground"
-            >
-              JobAlchemy
-            </Link>
-          </div>{" "}
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <NavLink
-              to="#benefits"
-              onClick={(e) => handleScrollToSection(e, "benefits")}
-            >
-              Benefits
-            </NavLink>
-            <NavLink
-              to="#features"
-              onClick={(e) => handleScrollToSection(e, "features")}
-            >
-              Features
-            </NavLink>
-            <NavLink
-              to="#pricing"
-              onClick={(e) => handleScrollToSection(e, "pricing")}
-            >
-              Pricing
-            </NavLink>
-            <NavLink to="#faq" onClick={(e) => handleScrollToSection(e, "faq")}>
-              FAQ
-            </NavLink>
-            <NavLink to="/blogs">Blog</NavLink>
-          </nav>
-          <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
-            {/* <Link href={"/auth/login"}>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Login</Button>
-            </Link> */}
-          </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
-            {mobileMenuOpen ? (
-              <button
-                className="text-foreground hover:text-primary"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                <X />
-              </button>
-            ) : (
-              <button
-                id="mobile-menu-button"
-                className="text-foreground hover:text-primary"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                <Menu />
-              </button>
-            )}
-          </div>
+      <span className="font-medium text-lg  text-foreground">JobAlchemy</span>
+    </Link>
+  );
+
+  const NavLinks = () => (
+    <div className="lg:flex flex-row flex-1 absolute inset-0 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-muted-foreground font-medium hover:text-foreground transition duration-300">
+      <Link
+        href="/#benefits"
+        className="text-muted-foreground relative px-4 py-2 hover:text-foreground transition-all duration-300 ease-out hover:scale-105"
+        onClick={e => handleSmoothScroll(e, '#benefits')}
+      >
+        <span className="relative z-20">Benefits</span>
+      </Link>
+      <Link
+        href="/#features"
+        className="text-muted-foreground relative px-4 py-2 hover:text-foreground transition-all duration-300 ease-out hover:scale-105"
+        onClick={e => handleSmoothScroll(e, '#features')}
+      >
+        <span className="relative z-20">Features</span>
+      </Link>
+      <Link
+        href="/#pricing"
+        className="text-muted-foreground relative px-4 py-2 hover:text-foreground transition-all duration-300 ease-out hover:scale-105"
+        onClick={e => handleSmoothScroll(e, '#pricing')}
+      >
+        <span className="relative z-20">Pricing</span>
+      </Link>
+      <Link
+        href="/#faq"
+        className="text-muted-foreground relative px-4 py-2 hover:text-foreground transition-all duration-300 ease-out hover:scale-105"
+        onClick={e => handleSmoothScroll(e, '#faq')}
+      >
+        <span className="relative z-20">FAQ</span>
+      </Link>
+      <Link
+        href="/blogs"
+        className="text-muted-foreground relative px-4 py-2 hover:text-foreground transition-all duration-300 ease-out hover:scale-105"
+      >
+        <span className="relative z-20">Blog</span>
+      </Link>
+    </div>
+  );
+
+  const ActionButtons = () => (
+    <div className="flex items-center gap-4">
+      <ThemeToggle />
+      
+    </div>
+  );
+
+  const MobileMenuButton = () => (
+    <div className="flex items-center gap-2">
+      <ThemeToggle />
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="p-2 rounded-md hover:bg-muted transition-colors duration-200"
+        aria-label="Toggle mobile menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={`text-foreground transition-transform duration-200 ${
+            isMobileMenuOpen ? 'rotate-90' : ''
+          }`}
+        >
+          {isMobileMenuOpen ? (
+            <>
+              <path d="M18 6L6 18"></path>
+              <path d="M6 6l12 12"></path>
+            </>
+          ) : (
+            <>
+              <path d="M4 6l16 0"></path>
+              <path d="M4 12l16 0"></path>
+              <path d="M4 18l16 0"></path>
+            </>
+          )}
+        </svg>
+      </button>
+    </div>
+  );
+
+  const MobileMenu = () => (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ 
+        opacity: isMobileMenuOpen ? 1 : 0, 
+        y: isMobileMenuOpen ? 0 : -20,
+        display: isMobileMenuOpen ? 'block' : 'none'
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-2xl shadow-lg overflow-hidden mobile-menu-container"
+    >
+      <div className="flex flex-col p-4 space-y-4">
+        <Link
+          href="/#benefits"
+          className="text-muted-foreground px-4 py-3 hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+          onClick={e => { handleSmoothScroll(e, '#benefits'); setIsMobileMenuOpen(false); }}
+        >
+          Benefits
+        </Link>
+        <Link
+          href="/#features"
+          className="text-muted-foreground px-4 py-3 hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+          onClick={e => { handleSmoothScroll(e, '#features'); setIsMobileMenuOpen(false); }}
+        >
+          Features
+        </Link>
+        <Link
+          href="/#pricing"
+          className="text-muted-foreground px-4 py-3 hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+          onClick={e => { handleSmoothScroll(e, '#pricing'); setIsMobileMenuOpen(false); }}
+        >
+          Pricing
+        </Link>
+        <Link
+          href="/#faq"
+          className="text-muted-foreground px-4 py-3 hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+          onClick={e => { handleSmoothScroll(e, '#faq'); setIsMobileMenuOpen(false); }}
+        >
+          FAQ
+        </Link>
+        <Link
+          href="/blogs"
+          className="text-muted-foreground px-4 py-3 hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Blog
+        </Link>
+        <div className="border-t border-border pt-4 space-y-3">
+          <button
+            className="w-full px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-bold hover:bg-primary/90 transition-all duration-200 shadow-md"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Get Started
+          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div id="mobile-menu" className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <MobileNavLink
-                to="#benefits"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  handleScrollToSection(e, "benefits");
-                }}
-              >
-                Benefits
-              </MobileNavLink>
-              <MobileNavLink
-                to="#features"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  handleScrollToSection(e, "features");
-                }}
-              >
-                Features
-              </MobileNavLink>
-              <MobileNavLink
-                to="#solutions"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  handleScrollToSection(e, "solutions");
-                }}
-              >
-                Services
-              </MobileNavLink>{" "}
-              <MobileNavLink
-                to="#pricing"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  handleScrollToSection(e, "pricing");
-                }}
-              >
-                Pricing
-              </MobileNavLink>
-              <MobileNavLink
-                to="/blogs"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </MobileNavLink>
-              {/* <div className="pt-4 space-y-2">
-                <Link href={"/auth/login"}>
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">Login</Button>
-                </Link>
-              </div> */}
-            </div>
-          </div>
-        )}
       </div>
-    </section>
+    </motion.div>
   );
-}
 
-function NavLink({
-  to,
-  children,
-  onClick,
-}: {
-  to: string;
-  children: React.ReactNode;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}) {
   return (
-    <Link
-      href={to}
-      className="text-foreground hover:text-secondary duration-100 transition-colors"
-      onClick={onClick}
-    >
-      {children}
-    </Link>
-  );
-}
+    <div className="mt-2 w-full fixed top-0 inset-x-0 z-50">
+      {/* Mobile Menu Backdrop */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
 
-function MobileNavLink({
-  to,
-  onClick,
-  children,
-}: {
-  to: string;
-  onClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={to}
-      className="block px-3 py-2 text-foreground hover:text-secondary transition-colors"
-      onClick={onClick}
-    >
-      {children}
-    </Link>
+      {/* Desktop Navbar */}
+      <motion.div
+        className="hidden lg:flex flex-row self-start items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full"
+        style={{
+          minWidth: "800px",
+          willChange: "auto",
+        }}
+        animate={{
+          backgroundColor: isScrolled ? "hsl(var(--card))" : "transparent",
+          backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
+          boxShadow: isScrolled
+            ? "rgba(34, 42, 53, 0.12) 0px 0px 24px, rgba(0, 0, 0, 0.10) 0px 1px 1px, rgba(34, 42, 53, 0.08) 0px 0px 0px 1px, rgba(34, 42, 53, 0.16) 0px 0px 4px, rgba(47, 48, 55, 0.10) 0px 16px 68px, rgba(255, 255, 255, 0.15) 0px 1px 0px inset"
+            : "rgba(34, 42, 53, 0.12) 0px 0px 0px, rgba(0, 0, 0, 0.10) 0px 0px 0px, rgba(34, 42, 53, 0.08) 0px 0px 0px 0px, rgba(34, 42, 53, 0.16) 0px 0px 0px, rgba(47, 48, 55, 0.10) 0px 0px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px inset",
+          transform: isScrolled ? "translateY(20px)" : "none",
+          width: isScrolled ? "60%" : "100%",
+          border: isScrolled ? "1px solid hsl(var(--border))" : "none",
+        }}
+        transition={{
+          duration: 0.6,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
+        <Logo />
+        <NavLinks />
+        <ActionButtons />
+      </motion.div>
+
+      {/* Mobile Navbar */}
+      <motion.div
+        className="flex relative flex-col lg:hidden w-full justify-between items-center max-w-[calc(100vw-2rem)] mx-auto px-0 py-2 z-50"
+        style={{
+          willChange: "auto",
+          borderRadius: "2rem",
+        }}
+        animate={{
+          backgroundColor: isScrolled ? "hsl(var(--card))" : "transparent",
+          backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
+          boxShadow: isScrolled
+            ? "rgba(34, 42, 53, 0.06) 0px 0px 24px, rgba(0, 0, 0, 0.05) 0px 1px 1px, rgba(34, 42, 53, 0.04) 0px 0px 0px 1px, rgba(34, 42, 53, 0.08) 0px 0px 4px, rgba(47, 48, 55, 0.05) 0px 16px 68px, rgba(255, 255, 255, 0.1) 0px 1px 0px inset"
+            : "rgba(34, 42, 53, 0.06) 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px, rgba(34, 42, 53, 0.04) 0px 0px 0px 0px, rgba(34, 42, 53, 0.08) 0px 0px 0px, rgba(47, 48, 55, 0.05) 0px 0px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px inset",
+          width: isScrolled ? "90%" : "100%",
+          paddingRight: isScrolled ? "12px" : "0px",
+          paddingLeft: isScrolled ? "12px" : "0px",
+          transform: isScrolled ? "translateY(20px)" : "none",
+          border: isScrolled ? "1px solid hsl(var(--border))" : "none",
+        }}
+        transition={{
+          duration: 0.6,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
+        <div className="flex flex-row justify-between items-center w-full">
+          <Logo />
+          <MobileMenuButton />
+        </div>
+        <MobileMenu />
+      </motion.div>
+    </div>
   );
 }
