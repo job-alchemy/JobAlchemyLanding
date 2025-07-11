@@ -76,12 +76,18 @@ export default function Footer() {
             © {new Date().getFullYear()} JobAlchemy | All rights reserved.
             Transforming job applications with automation.
           </div>
-          <div className="text-sm">
+          <div className="text-sm flex gap-4">
             <Link 
               href="/privacy-policy" 
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Privacy Policy
+            </Link>
+            <Link 
+              href="/terms-and-conditions" 
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Terms & Conditions
             </Link>
           </div>
         </div>

@@ -250,7 +250,7 @@ export default function Navbar() {
           backgroundColor: isScrolled ? "hsl(var(--card))" : "transparent",
           backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
           boxShadow: isScrolled
-            ? "rgba(34, 42, 53, 0.12) 0px 0px 24px, rgba(0, 0, 0, 0.10) 0px 1px 1px, rgba(34, 42, 53, 0.08) 0px 0px 0px 1px, rgba(34, 42, 53, 0.16) 0px 0px 4px, rgba(47, 48, 55, 0.10) 0px 16px 68px, rgba(255, 255, 255, 0.15) 0px 1px 0px inset"
+            ? "rgba(34, 42, 53, 0.12) 0px 0px 24px, rgba(0, 0, 0, 0.10) 0px 1px 1px, rgba(34, 42, 53, 0.08) 0px 0px 0px 1px, rgba(34, 42, 53, 0.16) 0px 0px 4px, rgba(47, 48, 55, 0.10) 0px 2px 0px, rgba(255, 255, 255, 0.15) 0px 1px 0px inset"
             : "rgba(34, 42, 53, 0.12) 0px 0px 0px, rgba(0, 0, 0, 0.10) 0px 0px 0px, rgba(34, 42, 53, 0.08) 0px 0px 0px 0px, rgba(34, 42, 53, 0.16) 0px 0px 0px, rgba(47, 48, 55, 0.10) 0px 0px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px inset",
           transform: isScrolled ? "translateY(20px)" : "none",
           width: isScrolled ? "60%" : "100%",
