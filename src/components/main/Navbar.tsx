@@ -122,18 +122,18 @@ export default function Navbar() {
   );
 
   const ActionButtons = () => (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 relative z-50 pointer-events-auto">
       <ThemeToggle />
       
     </div>
   );
 
   const MobileMenuButton = () => (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 relative z-50 pointer-events-auto">
       <ThemeToggle />
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="p-2 rounded-md hover:bg-muted transition-colors duration-200"
+        className="p-2 rounded-md hover:bg-muted transition-colors duration-200 relative z-50 pointer-events-auto"
         aria-label="Toggle mobile menu"
       >
         <svg
