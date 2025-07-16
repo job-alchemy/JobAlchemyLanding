@@ -44,7 +44,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ title, description, isPro }) => {
   return (
     <div className="rounded-lg border text-card-foreground shadow-sm bg-muted h-full relative">
       <div className="flex flex-col space-y-1.5 p-6">
-        <h3 className="text-2xl font-semibold leading-none tracking-tight">{title}</h3>
+        <h3 className="text-2xl font-bold leading-none tracking-tight">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
       <Badge
@@ -64,7 +64,7 @@ export default function ServicesSection() {
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">Features</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Land Your Dream Job Faster</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Land Your Dream Job Faster</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Let our automation handle the tedious application process while you focus on preparing for interviews.
           </p>

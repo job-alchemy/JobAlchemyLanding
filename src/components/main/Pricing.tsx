@@ -68,7 +68,7 @@ export default function PricingSection() {
           <div className="text-lg text-primary mb-2 tracking-wider">
             Pricing
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
             Choose Your Application Power
           </h2>
           <p className="text-xl text-muted-foreground mb-8">

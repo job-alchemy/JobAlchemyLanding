@@ -4,10 +4,16 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ThemeToggle } from "../theme/ThemeToggle";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,14 +79,32 @@ export default function Navbar() {
     }
   };
 
-  const Logo = () => (
-    <Link
-      href="/"
-      className="font-normal flex space-x-2 items-center text-sm mr-4 text-foreground px-2 py-1 relative z-20 hover:text-primary transition-colors"
-    >
-      <span className="font-medium text-lg  text-foreground">JobAlchemy</span>
-    </Link>
-  );
+  const Logo = () => {
+    const { theme } = useTheme();
+
+    return (
+      <Link
+        href="/"
+        className="font-normal flex space-x-2 items-center text-sm mr-4 text-foreground px-2 py-1 relative z-20 hover:text-primary transition-colors"
+      >
+        <div className="flex items-center space-x-2">
+          {mounted ? (
+            <img 
+              src={theme === 'dark' ? '/navlogo-dark.png' : '/navlogo.png'} 
+              alt="JobAlchemy Logo" 
+              className="w-30 object-contain transition-opacity duration-300"
+            />
+          ) : (
+            <img 
+              src="/navlogo.png" 
+              alt="JobAlchemy Logo" 
+              className="w-30 object-contain transition-opacity duration-300"
+            />
+          )}
+        </div>
+      </Link>
+    );
+  };
 
   const NavLinks = () => (
     <div className="lg:flex flex-row flex-1 absolute inset-0 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-muted-foreground font-medium hover:text-foreground transition duration-300">

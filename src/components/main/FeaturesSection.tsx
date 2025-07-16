@@ -12,7 +12,7 @@ const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
     <div className="rounded-lg text-card-foreground h-full bg-background border-0 shadow-none text-center">
       <div className="flex-col space-y-1.5 p-6 flex justify-center items-center">
         <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">{icon}</div>
-        <h3 className="text-2xl font-semibold leading-none tracking-tight">{title}</h3>
+        <h3 className="text-2xl font-bold leading-none tracking-tight">{title}</h3>
       </div>
       <div className="p-6 pt-0 text-muted-foreground">{description}</div>
     </div>

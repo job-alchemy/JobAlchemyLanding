@@ -59,16 +59,16 @@ export default function FAQPage() {
       <div className="container">
         <header className="mb-6 lg:mb-12 text-center max-w-screen-md mx-auto">
           <div className="text-lg text-primary mb-2 tracking-wider">FAQS</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Common Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Common Questions</h2>
         </header>
         <div className="max-w-screen-md mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b">
-                <AccordionTrigger className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline text-left">
+                <AccordionTrigger className="flex flex-1 items-center justify-between py-4 font-large transition-all hover:underline text-left">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm">{item.answer}</AccordionContent>
+                <AccordionContent className="text-md">{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

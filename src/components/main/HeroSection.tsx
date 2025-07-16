@@ -21,7 +21,7 @@ const HeroSection = () => {
                   <span>AI-Powered Job Applications</span>
                 </HoverBorderGradient>
               </div>
-              <h1 className="mt-8 text-[#4a4a4a] dark:text-white text-4xl font-semibold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
+              <h1 className="mt-8 text-[#4a4a4a] dark:text-white text-4xl font-extrabold sm:text-6xl md:text-7xl tracking-tight lg:text-[4.5rem] leading-none">
                 Automate Your Job Search
               </h1>
               <div className="mt-10 mb-8 flex flex-col sm:flex-row items-center justify-center gap-10">
